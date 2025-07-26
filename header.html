@@ -1,9 +1,9 @@
 <header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
   <div class="container mx-auto flex justify-between items-center p-4">
     <!-- Logo -->
-    <h1 class="text-2xl font-extrabold text-blue-700 tracking-wide cursor-pointer hover:text-blue-800 transition">
+    <a href="index.html"><h1 class="text-xl sm:text-2xl font-extrabold text-blue-700 tracking-wide cursor-pointer hover:text-blue-800 transition">
       Syncwaves Info Solutions
-    </h1>
+    </h1></a>
 
     <!-- Menu Button (Mobile) -->
     <button id="menu-toggle" class="lg:hidden text-blue-700 text-3xl focus:outline-none transition transform hover:scale-110">
@@ -23,8 +23,8 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-md">
-    <ul class="flex flex-col space-y-4 p-4 text-gray-700 font-medium">
+  <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-md absolute top-full left-0 w-full border-t border-gray-200">
+    <ul class="flex flex-col space-y-4 p-4 text-gray-700 font-medium text-lg">
       <li><a href="index.html" class="menu-link hover:text-blue-600 block">Home</a></li>
       <li><a href="about.html" class="menu-link hover:text-blue-600 block">About</a></li>
       <li><a href="services.html" class="menu-link hover:text-blue-600 block">Services</a></li>
@@ -58,7 +58,7 @@
       scroll-behavior: smooth;
     }
     .active-link {
-      color: #1d4ed8; /* Blue-700 */
+      color: #1d4ed8;
       border-bottom: 2px solid #1d4ed8;
       padding-bottom: 2px;
     }
@@ -68,7 +68,6 @@
   // Highlight Active Menu Item
   const menuLinks = document.querySelectorAll('.menu-link');
   const currentPath = window.location.pathname.split('/').pop();
-
   menuLinks.forEach(link => {
     if (link.getAttribute('href') === currentPath) {
       link.classList.add('active-link');
