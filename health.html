@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical & Public Health Consulting - Sync Waves</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-600 { animation-delay: 0.6s; }
+
+    /* Card Styles */
+    .service-card {
+      background: linear-gradient(135deg, #ffffff, #f9fafb);
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden">
+
+  <!-- Header Include -->
+  <div data-include="header.html"></div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-700 via-blue-500 to-indigo-600 text-white py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto fade-in-up">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+        Clinical & Public Health Consulting
+      </h1>
+      <p class="text-lg md:text-xl opacity-90">
+        Expert statistical guidance across clinical trials, public health, and epidemiology.
+      </p>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-16 bg-gray-50 rounded-t-[50%]"></div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Card Template -->
+      <div class="service-card fade-in-up">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Statistical Leadership in Health Research</h3>
+        <p class="text-gray-700 mb-2">
+          We provide expert guidance at every stage of clinical and public health studies:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Clinical trials (randomized, blinded)</li>
+          <li>Large-scale epidemiological research</li>
+          <li>Observational and registry-based studies</li>
+          <li>Longitudinal and surveillance initiatives</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up delay-200">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Scientific Study Design & Planning</h3>
+        <p class="text-gray-700 mb-2">
+          We help design statistically robust studies that align with your objectives:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Randomized and adaptive trial planning</li>
+          <li>Sample size and power estimation</li>
+          <li>Stratification, cluster, and crossover designs</li>
+          <li>Interim monitoring and protocol optimization</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up delay-400">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Data Management & Quality Assurance</h3>
+        <p class="text-gray-700 mb-2">
+          Ensuring datasets are clean, consistent, and ready for advanced analytics:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Standardizing variable definitions</li>
+          <li>Harmonizing data across multiple sites</li>
+          <li>Regulatory-compliant data capture</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up delay-600">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Advanced Statistical & Epidemiological Analysis</h3>
+        <p class="text-gray-700 mb-2">
+          Leveraging cutting-edge methods to answer complex health questions:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Survival models (Kaplan-Meier, Cox models)</li>
+          <li>Mixed-effects and longitudinal modeling</li>
+          <li>Multilevel regression and causal inference</li>
+          <li>Propensity score analysis for observational data</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Regulatory-Compliant Reporting & Documentation</h3>
+        <p class="text-gray-700 mb-2">
+          Deliverables tailored to meet stringent regulatory requirements:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Comprehensive tables, listings, and figures</li>
+          <li>Clinical study reports (CSR), safety/efficacy summaries</li>
+          <li>Pre-specified analysis plans and submissions</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up delay-200">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Data Visualization & Communication</h3>
+        <p class="text-gray-700 mb-2">
+          We create impactful visuals to support decision-making:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Interactive dashboards</li>
+          <li>Risk and diagnostic visualizations</li>
+          <li>Custom charts for clinical and policy audiences</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up delay-400">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Compliance & Ethical Oversight</h3>
+        <p class="text-gray-700 mb-2">
+          We adhere to global clinical and ethical standards:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>IRB and human subjects compliance</li>
+          <li>Good Clinical Practice (GCP) and CDISC standards</li>
+          <li>Audit-ready documentation</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in-up delay-600">
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Why Choose Our Services</h3>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Strategic statistical leadership for healthcare</li>
+          <li>Evidence-based designs ensuring validity</li>
+          <li>Advanced analytics with regulatory compliance</li>
+          <li>Clear communication for clinical and public audiences</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
+    <div class="max-w-3xl mx-auto fade-in-up">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Partner with Us</h2>
+      <p class="text-lg mb-6 opacity-90">Let’s transform clinical and public health data into actionable insights.</p>
+      <a href="contact.html" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer Include -->
+  <div data-include="footer.html"></div>
+
+  <script src="include.js"></script>
+  <script>
+    // Scroll animation
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(40px)';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

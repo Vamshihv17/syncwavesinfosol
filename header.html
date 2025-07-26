@@ -1,0 +1,77 @@
+<header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <h1 class="text-2xl font-extrabold text-blue-700 tracking-wide cursor-pointer hover:text-blue-800 transition">
+      Syncwaves Info Solutions
+    </h1>
+
+    <!-- Menu Button (Mobile) -->
+    <button id="menu-toggle" class="lg:hidden text-blue-700 text-3xl focus:outline-none transition transform hover:scale-110">
+      ☰
+    </button>
+
+    <!-- Desktop Menu -->
+    <nav>
+      <ul id="menu" class="hidden lg:flex space-x-6 text-gray-700 font-semibold">
+        <li><a href="index.html" class="menu-link hover:text-blue-600 transition-colors">Home</a></li>
+        <li><a href="about.html" class="menu-link hover:text-blue-600 transition-colors">About</a></li>
+        <li><a href="services.html" class="menu-link hover:text-blue-600 transition-colors">Services</a></li>
+        <li><a href="health.html" class="menu-link hover:text-blue-600 transition-colors">Health Consulting</a></li>
+        <li><a href="contact.html" class="menu-link hover:text-blue-600 transition-colors">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-md">
+    <ul class="flex flex-col space-y-4 p-4 text-gray-700 font-medium">
+      <li><a href="index.html" class="menu-link hover:text-blue-600 block">Home</a></li>
+      <li><a href="about.html" class="menu-link hover:text-blue-600 block">About</a></li>
+      <li><a href="services.html" class="menu-link hover:text-blue-600 block">Services</a></li>
+      <li><a href="health.html" class="menu-link hover:text-blue-600 block">Health Consulting</a></li>
+      <li><a href="contact.html" class="menu-link hover:text-blue-600 block">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('animate-slide-down');
+  });
+
+  // Slide Down Animation
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-down {
+      animation: slideDown 0.3s ease-out forwards;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .active-link {
+      color: #1d4ed8; /* Blue-700 */
+      border-bottom: 2px solid #1d4ed8;
+      padding-bottom: 2px;
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Highlight Active Menu Item
+  const menuLinks = document.querySelectorAll('.menu-link');
+  const currentPath = window.location.pathname.split('/').pop();
+
+  menuLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active-link');
+    }
+  });
+</script>

@@ -1,0 +1,17 @@
+/* Ensure the page takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Use flexbox layout to push footer to bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content should take remaining space */
+main {
+  flex: 1;
+}
