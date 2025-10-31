@@ -1,26 +1,54 @@
-<!doctype html>
-<!-- Reusable header. Include with: <div data-include="header"></div> + assets/js/include.js -->
-<header class="site-header" role="banner">
-  <div class="container nav-wrap">
-    <a href="index.html" class="brand" aria-label="Syncwaves Info Solutions">
-      <span class="brand-mark" aria-hidden="true">∿</span>
-      <span class="brand-text">Syncwaves <b>Info Solutions</b></span>
-    </a>
-
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="mx-auto max-w-7xl flex items-center justify-between p-4">
+    <!-- Hamburger (mobile only) -->
+    <button id="menuToggle"
+      class="lg:hidden text-blue-700 text-3xl focus:outline-none"
+      aria-controls="mobileSidebar"
+      aria-expanded="false">
+      ☰
     </button>
 
-    <nav class="site-nav" role="navigation" aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="bioinformatics.html">Bioinformatics</a></li>
-        <li><a href="health.html">Health</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><button class="theme-toggle" aria-label="Switch theme" title="Switch theme">🌙</button></li>
-        <li><a href="contact.html" class="btn btn--sm btn--primary">Contact</a></li>
+    <!-- Logo -->
+    <a href="index.html" class="ml-4">
+      <h1 class="text-xl sm:text-2xl font-extrabold text-blue-700 tracking-wide">
+        Syncwaves Info Solutions
+      </h1>
+    </a>
+
+    <!-- Desktop menu (lg+) -->
+    <nav class="hidden lg:block ml-auto">
+      <ul class="flex space-x-6 text-gray-700 font-semibold">
+        <li><a class="hover:text-blue-600" href="index.html">Home</a></li>
+        <li><a class="hover:text-blue-600" href="about.html">About</a></li>
+        <li><a class="block" href="services.html">Statistics</a></li>
+        <li><a class="block" href="bioinfo.html">Bioinformatics</a></li>
+        <li><a class="hover:text-blue-600" href="health.html">Health Consulting</a></li>
+        <li><a class="hover:text-blue-600" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+<!-- Sidebar Overlay (FULL SCREEN for mobile) -->
+<div id="mobileOverlay"
+     class="fixed inset-0 bg-black/40 hidden z-[60] lg:hidden">
+  <!-- Panel -->
+  <aside id="mobileSidebar"
+         class="absolute left-0 top-0 h-full w-[70vw] max-w-[420px] bg-white shadow-xl
+                transition-transform duration-300 -translate-x-full">
+    <button id="closeSidebar"
+            class="absolute top-4 right-4 text-2xl text-gray-600 hover:text-red-600"
+            aria-label="Close">&times;</button>
+
+    <nav class="p-6">
+      <ul class="space-y-6 text-gray-800 font-medium">
+        <li><a class="block" href="index.html">Home</a></li>
+        <li><a class="block" href="about.html">About</a></li>
+        <li><a class="block" href="services.html">Statistics</a></li>
+        <li><a class="block" href="bioinfo.html">Bioinformatics</a></li>
+        <li><a class="block" href="health.html">Health Consulting</a></li>
+        <li><a class="block" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+</div>

@@ -1,89 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Contact · Syncwaves Info Solutions</title>
-  <meta name="description" content="Get in touch for statistical consulting and bioinformatics services—tell us about your project and timelines." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/include.js"></script>
-  <script defer src="assets/js/main.js"></script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Syncwaves Info Solutions",
-  "url": "https://example.com",
-  "logo": "https://example.com/logo.png",
-  "sameAs": [],
-  "description": "Statistical consulting and bioinformatics services."
-}
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Sync Waves</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
 
+  <style>
+    /* Custom fade-in animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+  </style>
 </head>
-<body>
-  <div data-include="header"></div>
-  <main id="content">
-    <section class="page-hero">
-      <div class="container">
-        <h1>Get in Touch</h1>
-        <p>Need help with your data? Let's discuss your goals, timelines, and preferred outcomes.</p>
-      </div>
-    </section>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <section class="section">
-      <div class="container grid two">
-        <form class="contact-form card" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your full name" required maxlength="120" />
-            <small class="error"></small>
+  <!-- Header Include -->
+  <div data-include="header.html"></div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-700 via-blue-500 to-indigo-600 text-white py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto fade-in-up">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Get in Touch</h1>
+      <p class="text-lg md:text-xl opacity-90">
+        Need help with your data? Let's discuss how we can assist you.
+      </p>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-16 bg-gray-50 rounded-t-[50%]"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto fade-in-up">
+      <!-- Contact Info -->
+      <div class="mb-10 bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+        <p class="text-lg text-gray-800 font-semibold mb-3">
+          📧 <a href="mailto:info@syncwaves.com" class="text-blue-600 hover:underline">info@syncwaves.com</a>
+        </p>
+        <p class="text-lg text-gray-800 font-semibold mb-3">
+          📞 <a href="tel:+91-9876543210" class="text-blue-600 hover:underline">+91-9876543210</a>
+        </p>
+        <p class="text-lg text-gray-800">
+          🌐 <a href="https://syncwaves.com/contact" class="text-blue-600 hover:underline">Contact Form Link</a>
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition fade-in-up delay-200">
+        <form action="#" method="POST" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-left font-semibold text-gray-700 mb-1">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name"
+                class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+            </div>
+            <div>
+              <label for="email" class="block text-left font-semibold text-gray-700 mb-1">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email"
+                class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+            </div>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-            <small class="error"></small>
+          <div>
+            <label for="subject" class="block text-left font-semibold text-gray-700 mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
           </div>
-          <div class="field">
-            <label for="phone">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel" placeholder="+91 90000 00000" />
+          <div>
+            <label for="message" class="block text-left font-semibold text-gray-700 mb-1">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here"
+              class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" required></textarea>
           </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Tell us about your project…" required></textarea>
-            <small class="error"></small>
-          </div>
-          <div class="field">
-            <label for="service">Service Interest</label>
-            <select id="service" name="service">
-              <option>Statistical Services</option>
-              <option>Bioinformatics</option>
-              <option>Clinical & Public Health</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <button class="btn btn--primary" type="submit">Send message</button>
-          <p class="form-note muted">This demo form validates client‑side and shows a success message. Connect to your backend or Formspree/Zapier to receive submissions.</p>
+          <button type="submit"
+            class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow hover:bg-blue-700 transition transform hover:-translate-y-1">
+            Send Message
+          </button>
         </form>
-
-        <aside class="card">
-          <h3>Contact Details</h3>
-          <ul class="link-list">
-            <li>📧 <a href="mailto:you@example.com">you@example.com</a></li>
-            <li>📞 <a href="tel:+919000000000">+91 90000 00000</a></li>
-            <li>🌐 <a href="#">www.syncwaves.example</a></li>
-            <li>📍 Hyderabad, India</li>
-          </ul>
-          <hr/>
-          <h3>Working Model</h3>
-          <p>We typically begin with a 30‑minute scoping call to map your goals and define a clear analysis plan and timeline.</p>
-        </aside>
       </div>
-    </section>
-  </main>
-  <div data-include="footer"></div>
-  <button class="back-to-top" aria-label="Back to top">↑</button>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
+    <div class="max-w-3xl mx-auto fade-in-up delay-400">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Want to Collaborate?</h2>
+      <p class="text-lg mb-6 opacity-90">Reach out to us for any project or consultation needs.</p>
+      <a href="mailto:info@syncwaves.com" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition">
+        Email Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer Include -->
+  <div data-include="footer.html"></div>
+
+  <script src="include.js"></script>
+  <script>
+    // Scroll animations
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(40px)';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

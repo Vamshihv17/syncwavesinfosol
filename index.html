@@ -1,206 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Syncwaves Info Solutions · Statistical & Bioinformatics Consulting</title>
-  <meta name="description" content="Expert statistical consulting and bioinformatics solutions across research, healthcare, genomics, agriculture, and industry." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/include.js"></script>
-  <script defer src="assets/js/main.js"></script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Syncwaves Info Solutions",
-  "url": "https://example.com",
-  "logo": "https://example.com/logo.png",
-  "sameAs": [],
-  "description": "Statistical consulting and bioinformatics services."
-}
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYNCWAVE INFO SOLUTIONS - Statistical Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Fade-In Animation */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 1s ease-out, transform 1s ease-out; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+    /* Hero Text Animation */
+    .fade-in-delay-200 { transition-delay: 0.2s; }
+    .fade-in-delay-400 { transition-delay: 0.4s; }
+    .fade-in-delay-600 { transition-delay: 0.6s; }
+    /* Floating Button Animation */
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .floating { animation: bounce 2s infinite; }
+  </style>
 </head>
-<body>
-  <div data-include="header"></div>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header Include -->
+  <div data-include="header.html"></div>
+  <script src="menu.js"></script>
 
-  <main id="content">
-    <section class="hero reveal">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>Expert Statistical Consulting for Research, Industry, and Innovation</h1>
-          <p>Transform complex data into actionable insights. From classical statistics to modern machine learning, we deliver transparent, reproducible, and scientifically valid solutions across academia, healthcare, agriculture, public health, genomics, business, and environmental research.</p>
-          <div class="cta-row">
-            <a href="contact.html" class="btn btn--primary">Start a Project</a>
-            <a href="services.html" class="btn btn--ghost">Explore Services</a>
+  <!-- Hero Section -->
+  <main>
+    <section class="relative bg-gradient-to-r from-blue-700 via-blue-500 to-blue-400 text-white text-center py-24 px-6 overflow-hidden">
+      <div class="relative z-10 max-w-5xl mx-auto">
+        <!-- NEW: Bioinformatics availability pill -->
+        <a href="bioinfo.html"
+           class="inline-block mb-5 fade-in floating bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full backdrop-blur hover:bg-white/20 transition"
+           aria-label="Bioinformatics services now available">
+          <span class="text-xs font-semibold uppercase tracking-wide">New</span>
+          <span class="mx-2 text-sm">Bioinformatics services now available</span>
+          <span class="text-sm">→</span>
+        </a>
+
+        <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 fade-in">
+          Empowering Decisions Through Data
+        </h2>
+        <p class="max-w-3xl mx-auto text-lg lg:text-xl fade-in fade-in-delay-200">
+          SYNCWAVE INFO SOLUTIONS transforms raw data into powerful insights, driving breakthroughs across research, healthcare, agriculture, business, and public health.
+        </p>
+        <p class="max-w-3xl mx-auto text-lg mt-4 fade-in fade-in-delay-400">
+          We combine cutting-edge analytics, machine learning, and classical statistical techniques to help you make confident, data-driven decisions.
+        </p>
+
+        <!-- UPDATED: dual CTAs (Services + Bioinformatics) -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="services.html"
+             class="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300 fade-in fade-in-delay-600">
+            Explore Our Services
+          </a>
+          <a href="bioinfo.html"
+             class="inline-block border-2 border-white text-white font-bold px-8 py-3 rounded-xl hover:bg-white/10 transform hover:scale-105 transition duration-300 fade-in fade-in-delay-600">
+            Explore Bioinformatics
+          </a>
+        </div>
+      </div>
+
+      <!-- Decorative Background Circles -->
+      <div class="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-2xl"></div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-700 mb-12 fade-in">Why Choose SYNCWAVE INFO SOLUTIONS?</h3>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-2 transition fade-in">
+            <h4 class="text-xl font-semibold text-blue-600 mb-3">Expertise</h4>
+            <p class="text-gray-600 text-sm">
+              Decades of combined experience in advanced statistics, ML, and analytics across multiple domains.
+            </p>
           </div>
-          <ul class="pill-row">
-            <li>EDA & Modeling</li><li>ML & Time Series</li><li>Experimental Design</li><li>Regulatory Reporting</li>
-          </ul>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="blob b1"></div>
-          <div class="blob b2"></div>
-          <div class="blob b3"></div>
-          <div class="stats-card">
-            <div class="stat"><span class="count" data-count="50">0</span>+ projects</div>
-            <div class="stat"><span class="count" data-count="12">0</span>+ domains</div>
-            <div class="stat"><span class="count" data-count="95">0</span>% on‑time</div>
+          <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-2 transition fade-in fade-in-delay-200">
+            <h4 class="text-xl font-semibold text-blue-600 mb-3">Custom Solutions</h4>
+            <p class="text-gray-600 text-sm">
+              We tailor every analysis to your data, ensuring actionable and meaningful outcomes.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-2 transition fade-in fade-in-delay-400">
+            <h4 class="text-xl font-semibold text-blue-600 mb-3">Cutting-Edge Tools</h4>
+            <p class="text-gray-600 text-sm">
+              From classical models to AI-driven insights, we bring the best of technology to your data.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-2 transition fade-in fade-in-delay-600">
+            <h4 class="text-xl font-semibold text-blue-600 mb-3">End-to-End Support</h4>
+            <p class="text-gray-600 text-sm">
+              From data cleaning to visualization, we walk with you through every step of your project.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section reveal">
-      <div class="container">
-        <h2>Comprehensive Statistical Services</h2>
-        <div class="grid cards-3">
-          <article class="card">
-            <h3>Data Cleaning &amp; Preprocessing</h3>
-            <ul class="check">
-              <li>Missing data imputation</li>
-              <li>Outlier detection & treatment</li>
-              <li>Variable type corrections</li>
-              <li>Normalization & transformation</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Exploratory Data Analysis</h3>
-            <ul class="check">
-              <li>Visual summaries & distributions</li>
-              <li>Descriptive statistics</li>
-              <li>PCA & clustering insights</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Statistical Modelling</h3>
-            <ul class="check">
-              <li>Linear & generalized linear models</li>
-              <li>Logistic regression & survival</li>
-              <li>Mixed models & repeated measures</li>
-              <li>Time series (ARIMA, SARIMA)</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Machine Learning</h3>
-            <ul class="check">
-              <li>Classification & regression</li>
-              <li>Clustering & dimensionality reduction</li>
-              <li>Ensemble models (RF, XGBoost)</li>
-              <li>Deep learning (CNN, RNN, LSTM)</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Experimental Design & Testing</h3>
-            <ul class="check">
-              <li>Sample size & power</li>
-              <li>ANOVA, MANOVA, non‑parametrics</li>
-              <li>RCTs & post‑hoc interpretation</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Reporting & Interpretation</h3>
-            <ul class="check">
-              <li>Plain‑language insights</li>
-              <li>APA/MLA‑compliant reporting</li>
-              <li>Manuscripts & regulatory docs</li>
-            </ul>
-          </article>
-        </div>
-        <div class="cta-center">
-          <a href="services.html" class="btn">View all services</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt reveal">
-      <div class="container">
-        <h2>Bioinformatics Services</h2>
-        <div class="grid cards-2">
-          <article class="card">
-            <h3>Gene Expression Intelligence</h3>
-            <p>RNA‑Seq & microarray analysis: normalization, DE genes, enrichment, co‑expression, and rich visualizations (heatmaps, volcano, PCA, networks).</p>
-            <a class="link" href="bioinformatics.html#transcriptomics">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Next Mutation Forecaster</h3>
-            <p>AI‑assisted mutation trend analysis with climate & region correlation, structural impact predictions, and variant simulation.</p>
-            <a class="link" href="bioinformatics.html#mutation">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Evolutionary Blueprints</h3>
-            <p>Phylogenetics, selection analysis, molecular clocks, ancestral reconstruction, and host‑pathogen co‑evolution.</p>
-            <a class="link" href="bioinformatics.html#evolution">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Precision SNP Mapping</h3>
-            <p>Variant calling, annotation, impact prediction, GWAS/association analyses, and custom SNP chip guidance.</p>
-            <a class="link" href="bioinformatics.html#snp">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Smart Molecule Docking</h3>
-            <p>Protein–ligand and protein–protein docking, MD simulations, and trajectory analyses for mechanistic insights.</p>
-            <a class="link" href="bioinformatics.html#docking">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Targeted Drug Discovery Engine</h3>
-            <p>Virtual screening, ADMET/PK, ligand & structure‑based design, hit‑to‑lead optimization, and repurposing.</p>
-            <a class="link" href="bioinformatics.html#drug">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Pan‑Omics Explorer</h3>
-            <p>Pan‑genomics for conserved/unique gene discovery, functional clustering, population diversity, and vaccine target discovery.</p>
-            <a class="link" href="bioinformatics.html#pan">Learn more →</a>
-          </article>
-          <article class="card">
-            <h3>Codon Optimization Suite</h3>
-            <p>Codon usage profiles, CAI/ENC/GC3, rare codons & context effects for expression optimization.</p>
-            <a class="link" href="bioinformatics.html#codon">Learn more →</a>
-          </article>
-        </div>
-        <div class="cta-center">
-          <a href="bioinformatics.html" class="btn">Explore bioinformatics</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="container">
-        <h2>Why Choose Us?</h2>
-        <div class="grid cards-3">
-          <article class="card card--soft">
-            <h3>Scientifically Grounded</h3>
-            <p>Every recommendation is backed by robust statistical theory and domain relevance.</p>
-          </article>
-          <article class="card card--soft">
-            <h3>Tailored Consulting</h3>
-            <p>Solutions customized to your research question or business challenge.</p>
-          </article>
-          <article class="card card--soft">
-            <h3>Transparent & Reproducible</h3>
-            <p>Clear documentation, versioned code, and reproducible workflows.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band reveal">
-      <div class="container cta-band__grid">
-        <div>
-          <h2>Ready to unlock your data?</h2>
-          <p>Tell us about your project and timelines. We’ll propose a right‑sized plan and a clear path to impact.</p>
-        </div>
-        <div class="cta-row">
-          <a href="contact.html" class="btn btn--primary">Get in touch</a>
-          <a href="health.html" class="btn btn--ghost">Clinical & Public Health</a>
-        </div>
+    <!-- Call to Action Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-20 text-center">
+      <h3 class="text-3xl font-bold mb-6 fade-in">Ready to Transform Your Data?</h3>
+      <p class="max-w-2xl mx-auto text-lg mb-8 fade-in fade-in-delay-200">
+        Let’s collaborate to unlock the full potential of your data. Our experts ensure clarity, accuracy, and actionable insights.
+      </p>
+      <div class="flex items-center justify-center gap-4">
+        <a href="contact.html"
+           class="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl shadow hover:bg-gray-100 transform hover:scale-105 transition duration-300 fade-in fade-in-delay-400">
+          Get in Touch
+        </a>
+        <!-- Optional secondary CTA to Bioinformatics from CTA section -->
+        <a href="bio.html"
+           class="inline-block border-2 border-white text-white font-bold px-8 py-3 rounded-xl hover:bg-white/10 transform hover:scale-105 transition duration-300 fade-in fade-in-delay-400">
+          Talk Bioinformatics
+        </a>
       </div>
     </section>
   </main>
 
-  <div data-include="footer"></div>
-  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <!-- Footer Include -->
+  <div data-include="footer.html"></div>
+
+  <script src="include.js"></script>
+  <script>
+    // Fade-in animation when elements are in viewport
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
+    });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

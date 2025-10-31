@@ -1,110 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Services · Syncwaves Info Solutions</title>
-  <meta name="description" content="Comprehensive statistical services: data cleaning, EDA, modeling, ML, experimental design, reporting, and domain consulting." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script defer src="assets/js/include.js"></script>
-  <script defer src="assets/js/main.js"></script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Syncwaves Info Solutions",
-  "url": "https://example.com",
-  "logo": "https://example.com/logo.png",
-  "sameAs": [],
-  "description": "Statistical consulting and bioinformatics services."
-}
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Sync Waves</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
 
+  <style>
+    /* Custom animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-800 { animation-delay: 0.8s; }
+  </style>
 </head>
-<body>
-  <div data-include="header"></div>
-  <main id="content">
-    <section class="page-hero">
-      <div class="container">
-        <h1>Comprehensive Statistical Services</h1>
-      </div>
-    </section>
+<body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden">
 
-    <section class="section">
-      <div class="container">
-        <div class="service-block">
-          <h2>1) Data Cleaning &amp; Preprocessing</h2>
-          <ul class="check">
+  <!-- Header Include -->
+  <div data-include="header.html"></div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-700 via-blue-500 to-indigo-600 text-white py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto fade-in-up">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Our Services</h1>
+      <p class="text-lg md:text-xl opacity-90">
+        We provide end-to-end statistical solutions tailored to your research and business needs.
+      </p>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-16 bg-gray-50 rounded-t-[50%]"></div>
+  </section>
+
+  <!-- Services Page Content -->
+  <section class="py-16 px-4 relative">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-blue-700 mb-12 fade-in-up">Comprehensive Statistical Services</h2>
+      
+      <!-- Service Cards -->
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Card Template -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">1. Data Cleaning & Preprocessing</h3>
+          <p class="text-gray-700 mb-3">We ensure your data is clean, consistent, and ready for analysis:</p>
+          <ul class="list-disc list-inside text-gray-600">
             <li>Missing data imputation</li>
-            <li>Outlier detection & treatment</li>
-            <li>Variable type corrections</li>
-            <li>Normalization & transformation</li>
+            <li>Outlier detection</li>
+            <li>Data normalization</li>
+            <li>Variable corrections</li>
           </ul>
         </div>
 
-        <div class="service-block">
-          <h2>2) Exploratory Data Analysis (EDA)</h2>
-          <ul class="check">
-            <li>Graphical summaries (boxplots, histograms, correlations)</li>
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up delay-200">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">2. Exploratory Data Analysis</h3>
+          <p class="text-gray-700 mb-3">We uncover patterns, distributions, and relationships:</p>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Graphical summaries</li>
             <li>Descriptive statistics</li>
-            <li>PCA and clustering insights</li>
+            <li>PCA & clustering insights</li>
           </ul>
         </div>
 
-        <div class="service-block">
-          <h2>3) Statistical Modelling</h2>
-          <ul class="check">
-            <li>Linear & generalized linear models</li>
-            <li>Logistic regression & survival analysis</li>
-            <li>Mixed models & repeated measures</li>
-            <li>Time series modeling (ARIMA, SARIMA)</li>
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up delay-400">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">3. Statistical Modelling</h3>
+          <p class="text-gray-700 mb-3">Robust modeling support, including:</p>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Linear & logistic regression</li>
+            <li>Survival analysis</li>
+            <li>Mixed models</li>
+            <li>Time series (ARIMA)</li>
           </ul>
         </div>
 
-        <div class="service-block">
-          <h2>4) Machine Learning Solutions</h2>
-          <ul class="check">
-            <li>Supervised learning (classification & regression)</li>
-            <li>Unsupervised learning (clustering, dimensionality reduction)</li>
-            <li>Ensemble models (Random Forest, XGBoost)</li>
-            <li>Deep learning (CNNs, RNNs, LSTM)</li>
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up delay-600">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">4. Machine Learning Solutions</h3>
+          <p class="text-gray-700 mb-3">Advanced analytics including:</p>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Classification & regression</li>
+            <li>Clustering & dimensionality reduction</li>
+            <li>Ensemble models</li>
+            <li>Deep learning (CNN, LSTM)</li>
           </ul>
         </div>
 
-        <div class="service-block">
-          <h2>5) Experimental Design &amp; Hypothesis Testing</h2>
-          <ul class="check">
-            <li>Sample size and power analysis</li>
-            <li>ANOVA, MANOVA, and non‑parametric tests</li>
-            <li>Randomized controlled trials (RCTs)</li>
-            <li>Post‑hoc analysis and interpretation</li>
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up delay-800">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">5. Experimental Design</h3>
+          <p class="text-gray-700 mb-3">We design experiments with statistical rigor:</p>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Sample size & power analysis</li>
+            <li>ANOVA & MANOVA</li>
+            <li>Randomized trials</li>
+            <li>Post-hoc tests</li>
           </ul>
         </div>
 
-        <div class="service-block">
-          <h2>6) Statistical Reporting &amp; Interpretation</h2>
-          <ul class="check">
-            <li>Result interpretation in plain language</li>
-            <li>APA/MLA format‑compliant reporting</li>
-            <li>Report writing for research papers, theses, and regulators</li>
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">6. Reporting & Interpretation</h3>
+          <p class="text-gray-700 mb-3">We translate numbers into insights:</p>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Plain language interpretation</li>
+            <li>APA/MLA statistical reporting</li>
+            <li>Research & thesis reports</li>
           </ul>
         </div>
 
-        <div class="service-block">
-          <h2>7) Domain‑Specific Consulting</h2>
-          <ul class="check">
-            <li>Public health (epidemiology, disease modeling)</li>
-            <li>Agriculture (yield prediction, soil modeling)</li>
-            <li>Genomics (expression profiling, clustering)</li>
-            <li>Social sciences (survey analysis, psychometrics)</li>
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-2 fade-in-up delay-200">
+          <h3 class="text-2xl font-semibold text-blue-600 mb-3">7. Domain-Specific Consulting</h3>
+          <p class="text-gray-700 mb-3">Specialized analytics expertise:</p>
+          <ul class="list-disc list-inside text-gray-600">
+            <li>Public health & epidemiology</li>
+            <li>Agriculture & yield prediction</li>
+            <li>Genomics & bioinformatics</li>
+            <li>Social sciences</li>
           </ul>
         </div>
       </div>
-    </section>
-  </main>
-  <div data-include="footer"></div>
-  <button class="back-to-top" aria-label="Back to top">↑</button>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
+    <div class="max-w-4xl mx-auto fade-in-up">
+      <h4 class="text-3xl md:text-4xl font-bold mb-4">Need Expert Statistical Support?</h4>
+      <p class="text-lg mb-8 opacity-90">
+        Let's work together to transform your data into actionable insights.
+      </p>
+      <a href="contact.html" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer Include -->
+  <div data-include="footer.html"></div>
+
+  <script src="include.js"></script>
+  <script>
+    // Scroll animation
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(40px)';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
