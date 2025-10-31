@@ -1,121 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - SYNCWAVE INFO SOLUTIONS</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    /* Custom animations */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .fade-in { animation: fadeIn 1s ease-out forwards; }
-    .fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-600 { animation-delay: 0.6s; }
-    .delay-800 { animation-delay: 0.8s; }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden">
-
-  <!-- Header Include -->
-  <div data-include="header.html"></div>
-
-  <!-- Hero Banner -->
-  <section class="relative bg-gradient-to-r from-blue-700 via-blue-500 to-indigo-600 text-white py-20 px-4">
-    <div class="max-w-5xl mx-auto text-center fade-in-up">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">About Syncwave</h1>
-      <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-        Crafting powerful statistical solutions with creativity, innovation, and precision.
-      </p>
-    </div>
-    <div class="absolute bottom-0 left-0 w-full h-16 bg-white rounded-t-[50%]"></div>
-  </section>
-
-  <!-- About Section -->
-  <section class="py-16 px-4 bg-gray-50 relative">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-blue-700 mb-6 fade-in-up">About Our Practice</h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-4 fade-in-up delay-200">
-        Led by an experienced statistician with academic and applied expertise, our consulting practice specializes 
-        in statistical problem-solving tailored to real-world data. We believe that behind every dataset lies a story, 
-        and our mission is to help you tell it accurately and meaningfully.
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed fade-in-up delay-400">
-        We integrate classical statistics with modern machine learning, offering transparent, reproducible, 
-        and scientifically valid solutions.
-      </p>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="bg-white py-20 px-4 relative">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-10 fade-in-up">Why Choose Us?</h3>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700 text-lg">
-        <li class="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-in-up delay-200">
-          <span class="text-blue-600 text-2xl">✓</span>
-          <span>Scientifically grounded: Every recommendation is backed by statistical theory and practical relevance.</span>
-        </li>
-        <li class="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-in-up delay-400">
-          <span class="text-blue-600 text-2xl">✓</span>
-          <span>Tailored consulting: Customized to your research question or business challenge.</span>
-        </li>
-        <li class="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-in-up delay-600">
-          <span class="text-blue-600 text-2xl">✓</span>
-          <span>Transparent and reproducible: Clear documentation of methods and analysis.</span>
-        </li>
-        <li class="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 fade-in-up delay-800">
-          <span class="text-blue-600 text-2xl">✓</span>
-          <span>Multi-domain expertise: From medical research to environmental data.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
-    <div class="max-w-4xl mx-auto fade-in-up">
-      <h4 class="text-3xl md:text-4xl font-bold mb-4">Let's Collaborate</h4>
-      <p class="text-lg mb-8 opacity-90">
-        Ready to turn data into actionable insights? Get in touch with our expert team today.
-      </p>
-      <a href="contact.html" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition">
-        Contact Us
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer Include -->
-  <div data-include="footer.html"></div>
-
-  <script src="include.js"></script>
-  <script>
-    // Animate elements on scroll
-    const elements = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    elements.forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(30px)';
-      observer.observe(el);
-    });
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>About · Syncwaves Info Solutions</title>
+  <meta name="description" content="About our statistical & bioinformatics consulting practice—mission, methods, and values." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/include.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Syncwaves Info Solutions",
+  "url": "https://example.com",
+  "logo": "https://example.com/logo.png",
+  "sameAs": [],
+  "description": "Statistical consulting and bioinformatics services."
+}
   </script>
+
+</head>
+<body>
+  <div data-include="header"></div>
+  <main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <h1>About Our Practice</h1>
+        <p>Led by an experienced statistician with academic and applied domain expertise, our consulting practice specializes in statistical problem‑solving tailored to real‑world data. We believe that behind every dataset lies a story—and our mission is to help you tell it accurately and meaningfully. We integrate classical statistics with modern machine learning, offering transparent, reproducible, and scientifically valid solutions.</p>
+      </div>
+    </section>
+  </main>
+  <div data-include="footer"></div>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
 </body>
 </html>
